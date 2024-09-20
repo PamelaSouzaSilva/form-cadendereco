@@ -26,7 +26,7 @@ const cepValido = (cep) => cep.length == 8 && eNumero(cep);
 const preencherFormulario = (endereco) =>{
     document.getElementById('Rua').value = endereco.Rua; // Coloca o valor de logradouro da API dentro do campo logradouro do formulário
     document.getElementById('Bairro').value = endereco.Bairro;
-    document.getElementById('Localidade').value = endereco.Localidade;
-    document.getElementById('Uf').value = endereco.Uf;
+    document.getElementById('Cidade').value = endereco.Cidade;
+    document.getElementById('Estado').value = endereco.Estado;
 }
 
