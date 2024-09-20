@@ -10,6 +10,9 @@ const limparFormulario = () =>{
     document.getElementById('Bairro').value = '';
     document.getElementById('Cidade').value = '';
     document.getElementById('Estado').value = '';
+    document.getElementById('Complemento').value = '';
+    document.getElementById('CEP').value = '';
+    document.getElementById('Número').value = '';
   
 
 }
