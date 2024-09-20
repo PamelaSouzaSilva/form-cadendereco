@@ -12,7 +12,7 @@ const limparFormulario = () =>{
     document.getElementById('Estado').value = '';
     document.getElementById('Complemento').value = '';
     document.getElementById('CEP').value = '';
-    document.getElementById('Nú').value = '';
+    document.getElementById('Número').value = '';
   
 
 }
