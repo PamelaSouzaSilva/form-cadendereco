@@ -1,6 +1,7 @@
-# form-cadEndereco
+# Formulário para cadastro de endereço
  
 ## introdução
+Este projeto é um sistema de cadastro de endereços desenvolvido com HTML, CSS, JavaScript e Bootstrap. A principal funcionalidade do sistema é preencher automaticamente os campos de endereço com base no CEP informado, utilizando a API do ViaCEP para realizar essa consulta. O sistema também permite limpar os campos do formulário e validar o CEP inserido. O uso do Bootstrap garante um layout responsivo e organizado, facilitando a experiência do usuário.
  
 ## Funcionalidades
  
@@ -31,6 +32,30 @@ Descrição: Verifica se o CEP digitado pelo usuário é válido. A função con
 - preencherFormulario(endereco)
  
 Descrição: Essa função preenche automaticamente os campos do formulário com os dados obtidos da consulta à API ViaCEP. Ela recebe um objeto endereco e insere os valores retornados (como logradouro, bairro, cidade e estado) nos respectivos campos do formulário. Dessa forma, quando o usuário digita um CEP válido, os demais campos são preenchidos automaticamente, facilitando o cadastro.
+ 
+ 
+ pesquisarCep()
+ 
+Descrição: Esta função é responsável pela consulta à API do ViaCEP com base no CEP fornecido. Ela executa os seguintes passos:
+ 
+° Limpa os campos do formulário usando limparFormulario().
+ 
+° Valida o CEP inserido através de cepValido(). Se o CEP for válido, uma requisição assíncrona (fetch) é enviada para a URL da API ViaCEP no formato https://viacep.com.br/ws/${cep}/json/.
+ 
+° A resposta da API é convertida para o formato JSON.
+ 
+° Caso o CEP não seja encontrado, a função exibe uma mensagem de erro através de alert('CEP não encontrado').
+ 
+° Se o CEP for válido e encontrado, a função preencherFormulario(endereco) é chamada, preenchendo os campos do formulário com os dados retornados.
+ 
+Explicação sobre a URL e Fetch: A URL é construída dinamicamente com o CEP fornecido pelo usuário, utilizando a API pública do ViaCEP. O método fetch() envia uma requisição HTTP GET para a URL gerada e espera a resposta da API. Em seguida, os dados são convertidos em JSON para serem manipulados no código JavaScript. O uso de await permite que a requisição seja concluída antes de prosseguir, garantindo que os dados estejam prontos antes de tentar preencher o formulário.
+ 
+ 
+- document.getElementById('CEP').addEventListener('focusout', pesquisarCep)
+ 
+Descrição: Esse trecho de código adiciona um evento que aciona a função pesquisarCep() sempre que o campo CEP perde o foco (quando o usuário sai do campo após inserir o CEP). Isso permite que a consulta à API ViaCEP seja feita automaticamente, sem a necessidade de um botão adicional para enviar a requisição.
+ 
+ 
  
 ## Fontes consultadas
  
