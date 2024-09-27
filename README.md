@@ -87,8 +87,18 @@ Descrição: O Bootstrap foi utilizado para facilitar a estilização do formul�
  Validação de CEP (cepValido()):
  
  Nesse site possui vários exemplos de como validar um CEP corretamente. O uso de uma função para garantir que o CEP tenha 8 dígitos é uma prática comum, e esse artigo aborda diferentes métodos para essa validação.
+
  
+ ## Tecnologias Utilizadas
  
+ - Visual Studio Code
+ - Github
+ - Git
+ - HTML5
+ - CSS3
+ - Javascript
+ - [Bootstrap](https://getbootstrap.com/)
+ - [ViaCep](https://viacep.com.br/)
  
  
  
