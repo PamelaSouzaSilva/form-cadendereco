@@ -2,6 +2,10 @@
  
 ## introdução
 Este projeto é um sistema de cadastro de endereços desenvolvido com HTML, CSS, JavaScript e Bootstrap. A principal funcionalidade do sistema é preencher automaticamente os campos de endereço com base no CEP informado, utilizando a API do ViaCEP para realizar essa consulta. O sistema também permite limpar os campos do formulário e validar o CEP inserido. O uso do Bootstrap garante um layout responsivo e organizado, facilitando a experiência do usuário.
+
+Segue o GIf representando do nosso projeto pronto:
+
+<img src="img/cep.gif"  >
  
 ## Funcionalidades
  
